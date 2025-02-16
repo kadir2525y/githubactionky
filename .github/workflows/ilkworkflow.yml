@@ -1,0 +1,26 @@
+name: ilkwf
+
+
+on:
+    push:
+
+        branches:  [ main ]
+
+    pull_request:
+        branches:  [ main ]
+    workflow_dispatch:
+        
+jobs:
+    deneme:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+
+
+            - name: Deneme
+              run: |
+                 echo "hello world"
+                 printenv
+
+
